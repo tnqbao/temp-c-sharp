@@ -1,4 +1,4 @@
-<%@ Page Title="About Us" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Info.aspx.cs" Inherits="DoAnCaNhan.Info" %>
+<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Info.aspx.cs" Inherits="DoAnCaNhan.Info" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -6,175 +6,37 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="info-container">
         <div class="info-header">
-            <h1>🖥️ About QuocBaoPC</h1>
-            <p class="info-subtitle">Professional computer hardware provider with top-tier authenticity</p>
+            <h1>Course Information</h1>
+            <p class="info-subtitle">IS 385 K - Do An Ky Thuat Thuong Mai Dien Tu</p>
         </div>
 
-        <!-- ABOUT US -->
-        <div class="info-section">
-            <div class="section-icon">ℹ️</div>
-            <h2>About Us</h2>
-            <p>
-                <strong>QuocBaoPC</strong> is a computer hardware retail chain specializing in authentic PC components, gaming equipment, and tech accessories. 
-                With years of experience in the industry, we are committed to providing customers with high-quality products at the most competitive prices.
-            </p>
-            <p>
-                We are proud to be official partners of major brands such as ASUS, MSI, Gigabyte, Intel, AMD, NVIDIA, and many other renowned manufacturers.
-            </p>
-        </div>
-
-        <!-- MISSION -->
-        <div class="info-section">
-            <div class="section-icon">🎯</div>
-            <h2>Mission</h2>
-            <div class="mission-grid">
-                <div class="mission-card">
-                    <div class="mission-icon">✅</div>
-                    <h3>Quality</h3>
-                    <p>100% authentic products with verified origins</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-icon">💰</div>
-                    <h3>Pricing</h3>
-                    <p>Best market prices with frequent promotions</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-icon">🤝</div>
-                    <h3>Service</h3>
-                    <p>Dedicated consultation and 24/7 support</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-icon">🛡️</div>
-                    <h3>Warranty</h3>
-                    <p>Excellent warranty policy with flexible returns</p>
+        <div class="info-card">
+            <div class="info-row">
+                <div class="info-label">Class:</div>
+                <div class="info-value">IS 385 K</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Name:</div>
+                <div class="info-value">Tran Nguyen Quoc Bao</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">ID:</div>
+                <div class="info-value">28211106299</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">GitHub:</div>
+                <div class="info-value">
+                    <a href="https://github.com/tnqbao" target="_blank" class="link-btn">
+                        <span class="link-icon">🔗</span> github.com/tnqbao
+                    </a>
                 </div>
             </div>
-        </div>
-
-        <!-- PRODUCTS -->
-        <div class="info-section">
-            <div class="section-icon">📦</div>
-            <h2>Products & Services</h2>
-            <div class="products-list">
-                <div class="product-item">
-                    <span class="product-icon">🎯</span>
-                    <div>
-                        <h4>PC Components</h4>
-                        <p>CPU, VGA, RAM, SSD, Mainboard, PSU, Case...</p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <span class="product-icon">🎮</span>
-                    <div>
-                        <h4>Gaming Gear</h4>
-                        <p>Gaming mice, keyboards, headsets, monitors...</p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <span class="product-icon">💻</span>
-                    <div>
-                        <h4>Gaming Laptops</h4>
-                        <p>ASUS ROG, MSI, Acer Predator, Lenovo Legion...</p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <span class="product-icon">🔧</span>
-                    <div>
-                        <h4>PC Building Service</h4>
-                        <p>Consultation, assembly, and custom installation</p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <span class="product-icon">🛠️</span>
-                    <div>
-                        <h4>Maintenance & Repair</h4>
-                        <p>Cleaning, upgrades, and computer repairs</p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <span class="product-icon">📱</span>
-                    <div>
-                        <h4>Tech Accessories</h4>
-                        <p>USB drives, external HDDs, hubs, adapters...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CONTACT INFO -->
-        <div class="info-section">
-            <div class="section-icon">📞</div>
-            <h2>Contact Information</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Address</h3>
-                    <p>123 ABC Street, XYZ District<br/>Ho Chi Minh City</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">☎️</div>
-                    <h3>Hotline</h3>
-                    <p>0123.456.789<br/>0987.654.321</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <p>contact@quocbaopc.vn<br/>support@quocbaopc.vn</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">🕒</div>
-                    <h3>Business Hours</h3>
-                    <p>Mon - Sat: 8:00 AM - 9:00 PM<br/>Sunday: 8:00 AM - 6:00 PM</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- WHY CHOOSE US -->
-        <div class="info-section highlight-section">
-            <div class="section-icon">⭐</div>
-            <h2>Why Choose QuocBaoPC?</h2>
-            <div class="why-choose-list">
-                <div class="why-item">
-                    <span class="why-number">01</span>
-                    <div class="why-content">
-                        <h4>Official Partner</h4>
-                        <p>Official distributor of world-leading brands</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <span class="why-number">02</span>
-                    <div class="why-content">
-                        <h4>Authentic Products</h4>
-                        <p>100% genuine products with warranty seals and VAT invoices</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <span class="why-number">03</span>
-                    <div class="why-content">
-                        <h4>Competitive Pricing</h4>
-                        <p>Best market prices with frequent special offers</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <span class="why-number">04</span>
-                    <div class="why-content">
-                        <h4>Expert Consultation</h4>
-                        <p>Experienced technical team providing professional advice</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <span class="why-number">05</span>
-                    <div class="why-content">
-                        <h4>Nationwide Delivery</h4>
-                        <p>Fast shipping to all provinces across the country</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <span class="why-number">06</span>
-                    <div class="why-content">
-                        <h4>24/7 Support</h4>
-                        <p>Always ready to assist and answer customer questions</p>
-                    </div>
+            <div class="info-row">
+                <div class="info-label">LinkedIn:</div>
+                <div class="info-value">
+                    <a href="https://www.linkedin.com/in/tnqb2004/" target="_blank" class="link-btn">
+                        <span class="link-icon">🔗</span> linkedin.com/in/tnqb2004
+                    </a>
                 </div>
             </div>
         </div>
@@ -182,8 +44,9 @@
 
     <style>
         .info-container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
+            padding: 20px;
         }
 
         .info-header {
@@ -205,43 +68,93 @@
             color: #ccc;
         }
 
-        .info-section {
-            margin-bottom: 50px;
-            padding: 30px;
+        .info-card {
             background: rgba(255, 255, 255, 0.02);
+            border: 2px solid rgba(255, 107, 0, 0.3);
             border-radius: 15px;
-            border: 1px solid rgba(255, 107, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(255, 107, 0, 0.1);
         }
 
-        .section-icon {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 20px;
+        .info-row {
+            display: flex;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 107, 0, 0.1);
+            align-items: center;
         }
 
-        .info-section h2 {
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-size: 1.2rem;
+            color: #ff6b00;
+            font-weight: bold;
+            width: 150px;
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            font-size: 1.2rem;
+            color: #fff;
+            flex: 1;
+        }
+
+        .link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.2), rgba(255, 140, 63, 0.1));
+            border: 2px solid rgba(255, 107, 0, 0.3);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .link-btn:hover {
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.4), rgba(255, 140, 63, 0.2));
+            border-color: #ff6b00;
+            transform: translateX(5px);
+        }
+
+        .link-icon {
+            font-size: 1.2rem;
+        }
+
+        .project-info {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            border-radius: 15px;
+            padding: 40px;
+        }
+
+        .project-info h2 {
             color: #ff6b00;
             font-size: 2rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: center;
         }
 
-        .info-section p {
+        .project-info > p {
             color: #ccc;
-            line-height: 1.8;
             font-size: 1.1rem;
-            margin-bottom: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.6;
         }
 
-        /* Mission Grid */
-        .mission-grid {
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-top: 30px;
         }
 
-        .mission-card {
+        .feature-item {
             background: rgba(255, 107, 0, 0.05);
             border: 2px solid rgba(255, 107, 0, 0.2);
             border-radius: 12px;
@@ -250,200 +163,30 @@
             transition: all 0.3s ease;
         }
 
-        .mission-card:hover {
+        .feature-item:hover {
             transform: translateY(-5px);
             border-color: #ff6b00;
             box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
         }
 
-        .mission-icon {
-            font-size: 2.5rem;
+        .feature-icon {
+            font-size: 3rem;
             margin-bottom: 15px;
         }
 
-        .mission-card h3 {
+        .feature-item h3 {
             color: #ff6b00;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 10px;
         }
 
-        .mission-card p {
+        .feature-item p {
             color: #aaa;
             font-size: 0.95rem;
             line-height: 1.5;
             margin: 0;
         }
 
-        /* Products List */
-        .products-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .product-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 20px;
-            background: rgba(255, 107, 0, 0.03);
-            border-radius: 10px;
-            border-left: 4px solid #ff6b00;
-            transition: all 0.3s ease;
-        }
-
-        .product-item:hover {
-            background: rgba(255, 107, 0, 0.08);
-            transform: translateX(5px);
-        }
-
-        .product-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-
-        .product-item h4 {
-            color: #ff6b00;
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        .product-item p {
-            color: #aaa;
-            font-size: 0.95rem;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        /* Contact Grid */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .contact-card {
-            background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
-            border: 2px solid rgba(255, 107, 0, 0.2);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .contact-card:hover {
-            border-color: #ff6b00;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
-        }
-
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .contact-card h3 {
-            color: #ff6b00;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .contact-card p {
-            color: #ccc;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* Why Choose Us */
-        .highlight-section {
-            background: linear-gradient(135deg, rgba(255, 107, 0, 0.08), rgba(255, 140, 63, 0.05));
-            border: 2px solid rgba(255, 107, 0, 0.2);
-        }
-
-        .why-choose-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .why-item {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .why-item:hover {
-            background: rgba(255, 107, 0, 0.1);
-            transform: translateX(5px);
-        }
-
-        .why-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #ff6b00;
-            flex-shrink: 0;
-            line-height: 1;
-        }
-
-        .why-content h4 {
-            color: #ff6b00;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-
-        .why-content p {
-            color: #aaa;
-            font-size: 0.95rem;
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        /* Student Section */
-        .student-section {
-            background: linear-gradient(135deg, rgba(255, 107, 0, 0.1), rgba(255, 140, 63, 0.08));
-            border: 2px solid rgba(255, 107, 0, 0.3);
-        }
-
-        .student-info {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .info-table tr {
-            border-bottom: 1px solid rgba(255, 107, 0, 0.2);
-        }
-
-        .info-table th,
-        .info-table td {
-            padding: 15px;
-            text-align: left;
-        }
-
-        .info-table th {
-            color: #ff6b00;
-            font-weight: bold;
-            width: 40%;
-        }
-
-        .info-table td {
-            color: #ccc;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             .info-header h1 {
                 font-size: 2rem;
@@ -453,34 +196,34 @@
                 font-size: 1rem;
             }
 
-            .info-section {
-                padding: 20px;
+            .info-card {
+                padding: 25px;
             }
 
-            .info-section h2 {
-                font-size: 1.5rem;
+            .info-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
             }
 
-            .mission-grid,
-            .products-list,
-            .contact-grid,
-            .why-choose-list {
-                grid-template-columns: 1fr;
-            }
-
-            .info-table th,
-            .info-table td {
-                display: block;
+            .info-label {
                 width: 100%;
             }
 
-            .info-table th {
-                padding-bottom: 5px;
+            .link-btn {
+                font-size: 0.9rem;
             }
 
-            .info-table td {
-                padding-top: 5px;
-                padding-bottom: 15px;
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-info {
+                padding: 25px;
+            }
+
+            .project-info h2 {
+                font-size: 1.5rem;
             }
         }
     </style>

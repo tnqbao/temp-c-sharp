@@ -5,11 +5,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="admin-container">
-        <h1>⚙️ System Administration</h1>
+        <h1>⚙System Administration</h1>
         
         <div class="tabs">
-            <button class="tab-btn active" onclick="showTab('shops')">Manage Shops</button>
-            <button class="tab-btn" onclick="showTab('products')">Manage Products</button>
+            <button class="tab-btn active" onclick="showTab('shops', this)">Manage Shops</button>
+            <button class="tab-btn" onclick="showTab('products', this)">Manage Products</button>
         </div>
 
         <div id="shops-tab" class="tab-content active">
@@ -324,17 +324,17 @@
     </style>
 
     <script type="text/javascript">
-        function showTab(tabName) {
+        function showTab(tabName, element) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             
             document.getElementById(tabName + '-tab').classList.add('active');
-            event.target.classList.add('active');
+            element.classList.add('active');
         }
 
         function showShopForm() {
             document.getElementById('shop-form').style.display = 'block';
-            document.getElementById('<%= lblShopFormTitle.ClientID %>').innerText = 'Thêm cửa hàng mới';
+            document.getElementById('<%= lblShopFormTitle.ClientID %>').innerText = 'Add New Shop';
             document.getElementById('<%= hfShopId.ClientID %>').value = '';
             document.getElementById('<%= txtShopName.ClientID %>').value = '';
             document.getElementById('<%= txtShopAddress.ClientID %>').value = '';
@@ -347,7 +347,7 @@
 
         function showProductForm() {
             document.getElementById('product-form').style.display = 'block';
-            document.getElementById('<%= lblProductFormTitle.ClientID %>').innerText = 'Thêm sản phẩm mới';
+            document.getElementById('<%= lblProductFormTitle.ClientID %>').innerText = 'Add New Product';
             document.getElementById('<%= hfProductId.ClientID %>').value = '';
         }
 
