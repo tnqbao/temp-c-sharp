@@ -1,6 +1,8 @@
 <%@ Page Title="Chi tiết cửa hàng" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="ShopDetail.aspx.cs" Inherits="ShopDetail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -163,4 +165,3 @@
         }
     </style>
 </asp:Content>
-
