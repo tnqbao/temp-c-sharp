@@ -5,7 +5,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="product-detail-container">
-        <a href="javascript:history.back()" class="back-link">← Back</a>
+        <a href="javascript:history.back()" class="back-link"> Back</a>
         
         <div class="product-detail">
             <div class="product-image">

@@ -7,7 +7,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="shop-detail-container">
-        <a href="/Shop.aspx" class="back-link">← Back to list</a>
+        <a href="/Shop.aspx" class="back-link"> Back to list</a>
         
         <div class="shop-info">
             <div class="shop-header">
