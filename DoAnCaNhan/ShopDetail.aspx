@@ -11,14 +11,14 @@
         
         <div class="shop-info">
             <div class="shop-header">
-                <div class="shop-icon-large">🏬</div>
+                <div class="shop-icon-large"></div>
                 <div>
                     <h1><asp:Label ID="lblShopName" runat="server"></asp:Label></h1>
                     <p class="shop-meta">
-                        📍 <asp:Label ID="lblAddress" runat="server"></asp:Label>
+                         <asp:Label ID="lblAddress" runat="server"></asp:Label>
                     </p>
                     <p class="shop-meta">
-                        📞 <asp:Label ID="lblPhone" runat="server"></asp:Label>
+                        <asp:Label ID="lblPhone" runat="server"></asp:Label>
                     </p>
                 </div>
             </div>

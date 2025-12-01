@@ -28,25 +28,25 @@
 
     <!-- FEATURES SECTION -->
     <div class="features-section">
-        <h2 class="section-title">🌟 Why Choose Us?</h2>
+        <h2 class="section-title">Why Choose Us?</h2>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="feature-icon">✅</div>
+                <div class="feature-icon"></div>
                 <h3>100% Authentic</h3>
                 <p>Genuine products with full warranty seals</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🚚</div>
+                <div class="feature-icon"></div>
                 <h3>Fast Delivery</h3>
                 <p>Nationwide shipping within 24-48h</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">💰</div>
+                <div class="feature-icon"></div>
                 <h3>Best Prices</h3>
                 <p>Competitive pricing with attractive deals</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🛡️</div>
+                <div class="feature-icon"></div>
                 <h3>Long-term Warranty</h3>
                 <p>Flexible warranty and return support</p>
             </div>

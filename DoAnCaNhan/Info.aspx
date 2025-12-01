@@ -27,7 +27,7 @@
                 <div class="info-label">GitHub:</div>
                 <div class="info-value">
                     <a href="https://github.com/tnqbao" target="_blank" class="link-btn">
-                        <span class="link-icon">🔗</span> github.com/tnqbao
+                        <span class="link-icon"></span> github.com/tnqbao
                     </a>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 <div class="info-label">LinkedIn:</div>
                 <div class="info-value">
                     <a href="https://www.linkedin.com/in/tnqb2004/" target="_blank" class="link-btn">
-                        <span class="link-icon">🔗</span> linkedin.com/in/tnqb2004
+                        <span class="link-icon"></span> linkedin.com/in/tnqb2004
                     </a>
                 </div>
             </div>

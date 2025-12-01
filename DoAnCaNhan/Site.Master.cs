@@ -6,13 +6,13 @@ public partial class Site : System.Web.UI.MasterPage
     {
         if (Session["Username"] != null)
         {
-            lnkLogin.Text = "Đăng xuất (" + Session["Username"] + ")";
+            lnkLogin.Text = "Logout (" + Session["Username"] + ")";
             lnkLogin.NavigateUrl = "/Logout.aspx";
             lnkRegister.Visible = false;
         }
         else
         {
-            lnkLogin.Text = "Đăng nhập";
+            lnkLogin.Text = "Login";
             lnkLogin.NavigateUrl = "/Login.aspx";
             lnkRegister.Visible = true;
         }
