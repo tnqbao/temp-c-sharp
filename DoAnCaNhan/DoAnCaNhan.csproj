@@ -105,13 +105,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Admin.aspx" />
     <Content Include="App_Data\tnqbaopc.mdf" />
     <Content Include="App_Data\tnqbaopc_log.ldf">
       <DependentUpon>tnqbaopc.mdf</DependentUpon>
     </Content>
-    <Content Include="Contact.aspx" />
     <Content Include="fonts\Content\bootstrap-theme.css" />
     <Content Include="fonts\Content\bootstrap-theme.min.css" />
     <Content Include="fonts\Content\bootstrap.css" />
@@ -129,6 +127,7 @@
     <Content Include="fonts\Content\bootstrap.css.map" />
     <Content Include="fonts\Content\bootstrap-theme.min.css.map" />
     <Content Include="fonts\Content\bootstrap-theme.css.map" />
+    <Content Include="Info.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Register.aspx" />
@@ -177,21 +176,7 @@
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -202,6 +187,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Info.aspx.cs" />
+    <Compile Include="Info.aspx.designer.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

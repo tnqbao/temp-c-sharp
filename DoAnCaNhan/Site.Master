@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Linh Kiện PC</title>
@@ -88,14 +88,15 @@
 <body>
     <form id="form1" runat="server">
         <header>
-            <h1>Shop Linh Kiện PC</h1>
+            <h1>🖥️ Shop Linh Kiện PC</h1>
             <span class="hamburger" onclick="toggleMenu()">☰</span>
             <nav id="mainNav">
-                <asp:HyperLink ID="lnkShop" runat="server" NavigateUrl="~/Pages/Shop.aspx">Cửa hàng</asp:HyperLink>
-                <asp:HyperLink ID="lnkOrders" runat="server" NavigateUrl="~/Pages/OrderHistory.aspx">Đơn hàng</asp:HyperLink>
-                <asp:HyperLink ID="lnkInfo" runat="server" NavigateUrl="~/Pages/Info.aspx">Thông tin</asp:HyperLink>
-                <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Pages/Login.aspx">Đăng nhập</asp:HyperLink>
-                <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="~/Pages/Register.aspx">Đăng ký</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Trang chủ</asp:HyperLink>
+                <asp:HyperLink ID="lnkShop" runat="server" NavigateUrl="~/Shop.aspx">Cửa hàng</asp:HyperLink>
+                <asp:HyperLink ID="lnkOrders" runat="server" NavigateUrl="~/Admin.aspx">Quản trị</asp:HyperLink>
+                <asp:HyperLink ID="lnkInfo" runat="server" NavigateUrl="~/Info.aspx">Thông tin</asp:HyperLink>
+                <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Login.aspx">Đăng nhập</asp:HyperLink>
+                <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="~/Register.aspx">Đăng ký</asp:HyperLink>
             </nav>
         </header>
         <div class="content">
