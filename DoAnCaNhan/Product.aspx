@@ -100,6 +100,51 @@
             margin-bottom: 20px;
         }
 
+        .description {
+            margin: 30px 0;
+        }
+
+        .description h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .description p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .shop-info-box {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .shop-info-box h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .shop-info-box p {
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .btn-shop {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff6b00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .btn-shop:hover {
+            background: #ff8c3f;
+        }
+
         .quantity-selector {
             margin: 25px 0;
         }

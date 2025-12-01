@@ -55,9 +55,10 @@ public partial class ShopDetail : System.Web.UI.Page
             da.SelectCommand.Parameters.AddWithValue("@ShopId", shopId);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            
+            // Bind DataTable directly instead of using anonymous types
             rptProducts.DataSource = dt;
             rptProducts.DataBind();
         }
     }
 }
-

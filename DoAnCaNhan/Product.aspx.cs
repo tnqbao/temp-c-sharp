@@ -6,8 +6,6 @@ using System.Linq;
 
 public partial class Product : System.Web.UI.Page
 {
-    private string currentProductId;
-
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -15,7 +13,6 @@ public partial class Product : System.Web.UI.Page
             string productId = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(productId))
             {
-                currentProductId = productId;
                 ViewState["ProductId"] = productId;
                 LoadProduct(productId);
             }
@@ -23,10 +20,6 @@ public partial class Product : System.Web.UI.Page
             {
                 Response.Redirect("/Shop.aspx");
             }
-        }
-        else
-        {
-            currentProductId = ViewState["ProductId"]?.ToString();
         }
     }
 
@@ -57,15 +50,6 @@ public partial class Product : System.Web.UI.Page
                         lblShopName.Text = reader["ShopName"].ToString();
                         imgProduct.ImageUrl = reader["ImageUrl"].ToString();
                         lnkViewShop.NavigateUrl = "ShopDetail.aspx?id=" + reader["ShopId"];
-                        
-                        ViewState["ProductData"] = new
-                        {
-                            Price = reader["Price"],
-                            Stock = reader["Stock"],
-                            Name = reader["ProductName"].ToString(),
-                            Brand = reader["Brand"].ToString(),
-                            ImageUrl = reader["ImageUrl"].ToString()
-                        };
                     }
                     else
                     {
@@ -116,7 +100,7 @@ public partial class Product : System.Web.UI.Page
                 ProductName = lblProductName.Text,
                 Brand = lblBrand.Text,
                 ImageUrl = imgProduct.ImageUrl,
-                Price = decimal.Parse(lblPrice.Text.Replace(",", "")),
+                Price = decimal.Parse(lblPrice.Text.Replace(",", "").Replace(".", "")),
                 Quantity = quantity
             });
         }

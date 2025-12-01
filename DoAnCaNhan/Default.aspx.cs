@@ -24,8 +24,11 @@ public partial class Default : System.Web.UI.Page
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            rptHero.DataSource = dt;
-            rptHero.DataBind();
+            if (rptHero != null)
+            {
+                rptHero.DataSource = dt;
+                rptHero.DataBind();
+            }
         }
     }
 
@@ -38,8 +41,11 @@ public partial class Default : System.Web.UI.Page
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            rptBestSeller.DataSource = dt;
-            rptBestSeller.DataBind();
+            if (rptBestSeller != null)
+            {
+                rptBestSeller.DataSource = dt;
+                rptBestSeller.DataBind();
+            }
         }
     }
 }
