@@ -49,15 +49,6 @@ public partial class Register
     protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
     /// <summary>
-    /// txtFullName control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox txtFullName;
-
-    /// <summary>
     /// btnRegister control.
     /// </summary>
     /// <remarks>

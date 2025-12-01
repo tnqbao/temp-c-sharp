@@ -22,7 +22,7 @@ public partial class Login : System.Web.UI.Page
         using (SqlConnection conn = new SqlConnection(connStr))
         {
             conn.Open();
-            string sql = "SELECT UserId, FullName FROM Users WHERE Username=@Username AND Password=@Password";
+            string sql = "SELECT UserId FROM Users WHERE Username=@Username AND Password=@Password";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@Username", username);
@@ -34,7 +34,6 @@ public partial class Login : System.Web.UI.Page
                     {
                         Session["UserId"] = reader["UserId"];
                         Session["Username"] = username;
-                        Session["FullName"] = reader["FullName"];
                         Response.Redirect("Default.aspx", false);
                         Context.ApplicationInstance.CompleteRequest();
                     }

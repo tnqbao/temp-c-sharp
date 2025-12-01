@@ -10,7 +10,6 @@ public partial class Register : System.Web.UI.Page
         string username = txtUsername.Text.Trim();
         string password = txtPassword.Text.Trim();
         string email = txtEmail.Text.Trim();
-        string fullName = txtFullName.Text.Trim();
 
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email))
         {
@@ -24,13 +23,12 @@ public partial class Register : System.Web.UI.Page
         using (SqlConnection conn = new SqlConnection(connStr))
         {
             conn.Open();
-            string sql = "INSERT INTO Users(Username, Password, Email, FullName) VALUES(@Username,@Password,@Email,@FullName)";
+            string sql = "INSERT INTO Users(Username, Password, Email) VALUES(@Username,@Password,@Email)";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@Username", username);
                 cmd.Parameters.AddWithValue("@Password", password); // demo, không hash
                 cmd.Parameters.AddWithValue("@Email", email);
-                cmd.Parameters.AddWithValue("@FullName", fullName);
 
                 try
                 {
@@ -43,7 +41,6 @@ public partial class Register : System.Web.UI.Page
                     txtUsername.Text = "";
                     txtPassword.Text = "";
                     txtEmail.Text = "";
-                    txtFullName.Text = "";
                     
                     // Redirect to Login page after 2 seconds
                     Response.AddHeader("REFRESH", "2;URL=Login.aspx");

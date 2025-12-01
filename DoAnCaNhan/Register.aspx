@@ -25,11 +25,6 @@
                 <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" Placeholder="Nhập mật khẩu" />
             </div>
 
-            <div class="form-group">
-                <label>Họ và tên</label>
-                <asp:TextBox ID="txtFullName" runat="server" CssClass="form-control" Placeholder="Nhập họ và tên" />
-            </div>
-
             <div class="form-actions">
                 <label class="checkbox-label">
                     <input type="checkbox" required /> 
