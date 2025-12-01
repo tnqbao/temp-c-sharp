@@ -1,6 +1,9 @@
-﻿<%@ Page Title="Trang Chủ" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Default" %>
+﻿<%@ Page Title="Trang Chủ" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Default" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <!-- HERO SECTION -->
     <div class="hero-section">
         <div class="hero-content">
@@ -110,6 +113,36 @@
             <div class="stat-number">100%</div>
             <div class="stat-label">Hài lòng</div>
         </div>
+    </div>
+
+    <!-- HERO PRODUCTS SECTION -->
+    <h2>Sản phẩm nổi bật</h2>
+    <div class="hero-products">
+        <asp:Repeater ID="rptHero" runat="server">
+            <ItemTemplate>
+                <div class="product-card">
+                    <img src='<%# Eval("ImageUrl") %>' alt='<%# Eval("ProductName") %>' />
+                    <h3><%# Eval("ProductName") %></h3>
+                    <p class="price"><%# Eval("Price", "{0:N0}") %> VNĐ</p>
+                    <a href='Product.aspx?id=<%# Eval("ProductId") %>' class="btn">Xem chi tiết</a>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+
+    <!-- BEST SELLER PRODUCTS SECTION -->
+    <h2>Best Seller ROG</h2>
+    <div class="best-seller-products">
+        <asp:Repeater ID="rptBestSeller" runat="server">
+            <ItemTemplate>
+                <div class="product-card">
+                    <img src='<%# Eval("ImageUrl") %>' alt='<%# Eval("ProductName") %>' />
+                    <h3><%# Eval("ProductName") %></h3>
+                    <p class="price"><%# Eval("Price", "{0:N0}") %> VNĐ</p>
+                    <a href='Product.aspx?id=<%# Eval("ProductId") %>' class="btn">Xem chi tiết</a>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
     </div>
 
     <style>
@@ -344,6 +377,72 @@
             font-size: 1.1rem;
         }
 
+        /* HERO PRODUCTS SECTION */
+        h2 {
+            color: #ff6b00;
+            margin: 30px 0 20px 0;
+            font-size: 1.8rem;
+        }
+
+        .hero-products,
+        .best-seller-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: #222;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(255, 107, 0, 0.3);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: #111;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin: 10px 0;
+            min-height: 50px;
+        }
+
+        .product-card .price {
+            color: #ff6b00;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .product-card .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff6b00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .product-card .btn:hover {
+            background: #ff8c3f;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero-section {
@@ -378,6 +477,17 @@
 
             .stats-section {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-products,
+            .best-seller-products {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+
+            .product-card h3 {
+                font-size: 1rem;
+                min-height: 40px;
             }
         }
     </style>
