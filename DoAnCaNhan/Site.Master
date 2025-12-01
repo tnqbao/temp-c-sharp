@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Linh Kiện PC</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: linear-gradient(135deg, #1e1e1e, #121212); color: #f5f5f5; }
+
+        header {
+            background: linear-gradient(90deg, #0d0d0d, #1f1f1f);
+            padding: 15px 30px;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        }
+        header h1 { display: inline-block; font-size: 28px; color: #fff; }
+        nav { display: inline-block; float: right; }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff6b00;
+            color: #fff;
+        }
+
+        .hamburger { display: none; cursor: pointer; font-size: 26px; color: #fff; }
+        @media (max-width: 768px) {
+            nav { display: none; width: 100%; background: #1f1f1f; position: absolute; top: 60px; left: 0; flex-direction: column; z-index: 999; }
+            nav a { display: block; margin:0; border-top: 1px solid #333; }
+            .hamburger { display: inline-block; float: right; }
+        }
+
+        .content {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 25px;
+            background: #1b1b1b;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+        }
+
+        footer {
+            background: #0d0d0d;
+            color: #aaa;
+            text-align: center;
+            padding: 18px 0;
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #f5f5f5;
+        }
+        th, td { padding: 12px 15px; border: 1px solid #333; text-align: left; }
+        th { background: #272727; }
+        tr:nth-child(even) { background: #1a1a1a; }
+
+        button, .btn {
+            padding: 8px 16px;
+            background-color: #ff6b00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover, .btn:hover { background-color: #ff9b4d; }
+
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr { display: block; }
+            tr { margin-bottom: 15px; }
+            th { display: none; }
+            td { position: relative; padding-left: 50%; text-align: left; }
+            td::before { position: absolute; top: 12px; left: 15px; width: 45%; font-weight: bold; white-space: nowrap; }
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <h1>Shop Linh Kiện PC</h1>
+            <span class="hamburger" onclick="toggleMenu()">☰</span>
+            <nav id="mainNav">
+                <asp:HyperLink ID="lnkShop" runat="server" NavigateUrl="~/Pages/Shop.aspx">Cửa hàng</asp:HyperLink>
+                <asp:HyperLink ID="lnkOrders" runat="server" NavigateUrl="~/Pages/OrderHistory.aspx">Đơn hàng</asp:HyperLink>
+                <asp:HyperLink ID="lnkInfo" runat="server" NavigateUrl="~/Pages/Info.aspx">Thông tin</asp:HyperLink>
+                <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Pages/Login.aspx">Đăng nhập</asp:HyperLink>
+                <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="~/Pages/Register.aspx">Đăng ký</asp:HyperLink>
+            </nav>
+        </header>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            &copy; 2025 Shop Linh Kiện PC. All rights reserved.
+        </footer>
+    </form>
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('mainNav');
+            if (nav.style.display === 'block') { nav.style.display = 'none'; } else { nav.style.display = 'block'; }
+        }
+    </script>
+</body>
+</html>
