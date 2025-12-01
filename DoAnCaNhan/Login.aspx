@@ -1,36 +1,36 @@
-﻿<%@ Page Title="Đăng nhập" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="login-container">
         <div class="login-card">
             <div class="login-header">
-                <h2>Đăng nhập</h2>
-                <p>Nhập thông tin để tiếp tục</p>
+                <h2>Login</h2>
+                <p>Enter your credentials to continue</p>
             </div>
 
             <asp:Label ID="lblMessage" runat="server" CssClass="alert-message"></asp:Label>
             
             <div class="form-group">
-                <label>Tên đăng nhập</label>
-                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" Placeholder="Nhập tên đăng nhập" />
+                <label>Username</label>
+                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" Placeholder="Enter username" />
             </div>
 
             <div class="form-group">
-                <label>Mật khẩu</label>
-                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" Placeholder="Nhập mật khẩu" />
+                <label>Password</label>
+                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" Placeholder="Enter password" />
             </div>
 
             <div class="form-actions">
                 <label class="checkbox-label">
-                    <input type="checkbox" /> Ghi nhớ đăng nhập
+                    <input type="checkbox" /> Remember me
                 </label>
             </div>
 
-            <asp:Button ID="btnLogin" runat="server" Text="Đăng nhập" CssClass="btn-primary" OnClick="btnLogin_Click" />
+            <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn-primary" OnClick="btnLogin_Click" />
             
             <div class="form-footer">
-                Chưa có tài khoản? 
-                <asp:HyperLink runat="server" NavigateUrl="/Register.aspx" CssClass="link">Đăng ký ngay</asp:HyperLink>
+                Don't have an account? 
+                <asp:HyperLink runat="server" NavigateUrl="/Register.aspx" CssClass="link">Register now</asp:HyperLink>
             </div>
         </div>
     </div>

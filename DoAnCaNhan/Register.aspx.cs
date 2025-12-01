@@ -15,7 +15,7 @@ public partial class Register : System.Web.UI.Page
         {
             lblMessage.Visible = true;
             lblMessage.ForeColor = System.Drawing.Color.Red;
-            lblMessage.Text = "Vui lòng điền đầy đủ thông tin!";
+            lblMessage.Text = "Please fill in all fields!";
             return;
         }
 
@@ -27,7 +27,7 @@ public partial class Register : System.Web.UI.Page
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Password", password); // demo, không hash
+                cmd.Parameters.AddWithValue("@Password", password); // demo, no hashing
                 cmd.Parameters.AddWithValue("@Email", email);
 
                 try
@@ -35,7 +35,7 @@ public partial class Register : System.Web.UI.Page
                     cmd.ExecuteNonQuery();
                     lblMessage.Visible = true;
                     lblMessage.ForeColor = System.Drawing.Color.Green;
-                    lblMessage.Text = "Đăng ký thành công! Đang chuyển hướng đến trang đăng nhập...";
+                    lblMessage.Text = "Registration successful! Redirecting to login page...";
                     
                     // Clear form
                     txtUsername.Text = "";
@@ -50,9 +50,9 @@ public partial class Register : System.Web.UI.Page
                     lblMessage.Visible = true;
                     lblMessage.ForeColor = System.Drawing.Color.Red;
                     if (ex.Number == 2627) // duplicate key
-                        lblMessage.Text = "Username hoặc Email đã tồn tại!";
+                        lblMessage.Text = "Username or Email already exists!";
                     else
-                        lblMessage.Text = "Lỗi: " + ex.Message;
+                        lblMessage.Text = "Error: " + ex.Message;
                 }
             }
         }

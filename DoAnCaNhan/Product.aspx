@@ -1,11 +1,11 @@
-﻿<%@ Page Title="Chi tiết sản phẩm" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Product.aspx.cs" Inherits="Product" %>
+﻿<%@ Page Title="Product Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Product.aspx.cs" Inherits="Product" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="product-detail-container">
-        <a href="javascript:history.back()" class="back-link">← Quay lại</a>
+        <a href="javascript:history.back()" class="back-link">← Back</a>
         
         <div class="product-detail">
             <div class="product-image">
@@ -13,12 +13,12 @@
             </div>
             <div class="product-info">
                 <h1><asp:Label ID="lblProductName" runat="server"></asp:Label></h1>
-                <p class="brand">Thương hiệu: <asp:Label ID="lblBrand" runat="server"></asp:Label></p>
-                <p class="price"><asp:Label ID="lblPrice" runat="server"></asp:Label> VNĐ</p>
-                <p class="stock">Còn lại: <asp:Label ID="lblStock" runat="server"></asp:Label> sản phẩm</p>
+                <p class="brand">Brand: <asp:Label ID="lblBrand" runat="server"></asp:Label></p>
+                <p class="price"><asp:Label ID="lblPrice" runat="server"></asp:Label> VND</p>
+                <p class="stock">In Stock: <asp:Label ID="lblStock" runat="server"></asp:Label> items</p>
                 
                 <div class="quantity-selector">
-                    <label>Số lượng:</label>
+                    <label>Quantity:</label>
                     <div class="qty-controls">
                         <asp:Button ID="btnDecrease" runat="server" Text="-" CssClass="btn-qty" OnClick="btnDecrease_Click" />
                         <asp:TextBox ID="txtQuantity" runat="server" Text="1" CssClass="qty-input" TextMode="Number" min="1" />
@@ -26,18 +26,18 @@
                     </div>
                 </div>
 
-                <asp:Button ID="btnAddToCart" runat="server" Text="Thêm vào giỏ hàng" CssClass="btn-add-cart" OnClick="btnAddToCart_Click" />
+                <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" CssClass="btn-add-cart" OnClick="btnAddToCart_Click" />
                 <asp:Label ID="lblMessage" runat="server" CssClass="message"></asp:Label>
                 
                 <div class="description">
-                    <h3>Mô tả sản phẩm</h3>
+                    <h3>Product Description</h3>
                     <p><asp:Label ID="lblDescription" runat="server"></asp:Label></p>
                 </div>
 
                 <div class="shop-info-box">
-                    <h3>Cửa hàng</h3>
+                    <h3>Shop</h3>
                     <p><asp:Label ID="lblShopName" runat="server"></asp:Label></p>
-                    <asp:HyperLink ID="lnkViewShop" runat="server" CssClass="btn-shop">Xem cửa hàng</asp:HyperLink>
+                    <asp:HyperLink ID="lnkViewShop" runat="server" CssClass="btn-shop">View Shop</asp:HyperLink>
                 </div>
             </div>
         </div>

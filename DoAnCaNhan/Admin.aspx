@@ -1,41 +1,41 @@
-﻿<%@ Page Title="Quản trị" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Admin.aspx.cs" Inherits="Admin" %>
+﻿<%@ Page Title="Admin" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Admin.aspx.cs" Inherits="Admin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="admin-container">
-        <h1>⚙️ Quản trị hệ thống</h1>
+        <h1>⚙️ System Administration</h1>
         
         <div class="tabs">
-            <button class="tab-btn active" onclick="showTab('shops')">Quản lý cửa hàng</button>
-            <button class="tab-btn" onclick="showTab('products')">Quản lý sản phẩm</button>
+            <button class="tab-btn active" onclick="showTab('shops')">Manage Shops</button>
+            <button class="tab-btn" onclick="showTab('products')">Manage Products</button>
         </div>
 
         <div id="shops-tab" class="tab-content active">
             <div class="section-header">
-                <h2>Danh sách cửa hàng</h2>
-                <button class="btn-add" onclick="showShopForm()">+ Thêm cửa hàng</button>
+                <h2>Shop List</h2>
+                <button class="btn-add" onclick="showShopForm()">+ Add Shop</button>
             </div>
 
             <div id="shop-form" class="form-container" style="display:none;">
-                <h3><asp:Label ID="lblShopFormTitle" runat="server" Text="Thêm cửa hàng mới"></asp:Label></h3>
+                <h3><asp:Label ID="lblShopFormTitle" runat="server" Text="Add New Shop"></asp:Label></h3>
                 <asp:HiddenField ID="hfShopId" runat="server" />
                 <div class="form-row">
-                    <label>Tên cửa hàng</label>
+                    <label>Shop Name</label>
                     <asp:TextBox ID="txtShopName" runat="server" CssClass="form-input"></asp:TextBox>
                 </div>
                 <div class="form-row">
-                    <label>Địa chỉ</label>
+                    <label>Address</label>
                     <asp:TextBox ID="txtShopAddress" runat="server" CssClass="form-input"></asp:TextBox>
                 </div>
                 <div class="form-row">
-                    <label>Số điện thoại</label>
+                    <label>Phone</label>
                     <asp:TextBox ID="txtShopPhone" runat="server" CssClass="form-input"></asp:TextBox>
                 </div>
                 <div class="form-actions">
-                    <asp:Button ID="btnSaveShop" runat="server" Text="Lưu" CssClass="btn-save" OnClick="btnSaveShop_Click" />
-                    <button type="button" class="btn-cancel" onclick="hideShopForm()">Hủy</button>
+                    <asp:Button ID="btnSaveShop" runat="server" Text="Save" CssClass="btn-save" OnClick="btnSaveShop_Click" />
+                    <button type="button" class="btn-cancel" onclick="hideShopForm()">Cancel</button>
                 </div>
             </div>
 
@@ -43,15 +43,15 @@
                 OnRowCommand="gvShops_RowCommand" DataKeyNames="ShopId">
                 <Columns>
                     <asp:BoundField DataField="ShopId" HeaderText="ID" />
-                    <asp:BoundField DataField="ShopName" HeaderText="Tên cửa hàng" />
-                    <asp:BoundField DataField="Address" HeaderText="Địa chỉ" />
-                    <asp:BoundField DataField="Phone" HeaderText="Số điện thoại" />
-                    <asp:TemplateField HeaderText="Thao tác">
+                    <asp:BoundField DataField="ShopName" HeaderText="Shop Name" />
+                    <asp:BoundField DataField="Address" HeaderText="Address" />
+                    <asp:BoundField DataField="Phone" HeaderText="Phone" />
+                    <asp:TemplateField HeaderText="Actions">
                         <ItemTemplate>
                             <asp:Button runat="server" CommandName="EditShop" CommandArgument='<%# Eval("ShopId") %>' 
-                                Text="Sửa" CssClass="btn-edit" />
+                                Text="Edit" CssClass="btn-edit" />
                             <asp:Button runat="server" CommandName="DeleteShop" CommandArgument='<%# Eval("ShopId") %>' 
-                                Text="Xóa" CssClass="btn-delete" OnClientClick="return confirm('Xác nhận xóa cửa hàng này?');" />
+                                Text="Delete" CssClass="btn-delete" OnClientClick="return confirm('Confirm delete this shop?');" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -60,48 +60,48 @@
 
         <div id="products-tab" class="tab-content">
             <div class="section-header">
-                <h2>Danh sách sản phẩm</h2>
-                <button class="btn-add" onclick="showProductForm()">+ Thêm sản phẩm</button>
+                <h2>Product List</h2>
+                <button class="btn-add" onclick="showProductForm()">+ Add Product</button>
             </div>
 
             <div id="product-form" class="form-container" style="display:none;">
-                <h3><asp:Label ID="lblProductFormTitle" runat="server" Text="Thêm sản phẩm mới"></asp:Label></h3>
+                <h3><asp:Label ID="lblProductFormTitle" runat="server" Text="Add New Product"></asp:Label></h3>
                 <asp:HiddenField ID="hfProductId" runat="server" />
                 <div class="form-row">
-                    <label>Tên sản phẩm</label>
+                    <label>Product Name</label>
                     <asp:TextBox ID="txtProductName" runat="server" CssClass="form-input"></asp:TextBox>
                 </div>
                 <div class="form-row">
-                    <label>Cửa hàng</label>
+                    <label>Shop</label>
                     <asp:DropDownList ID="ddlShop" runat="server" CssClass="form-input"></asp:DropDownList>
                 </div>
                 <div class="form-row">
-                    <label>Danh mục</label>
+                    <label>Category</label>
                     <asp:DropDownList ID="ddlCategory" runat="server" CssClass="form-input"></asp:DropDownList>
                 </div>
                 <div class="form-row">
-                    <label>Thương hiệu</label>
+                    <label>Brand</label>
                     <asp:TextBox ID="txtBrand" runat="server" CssClass="form-input"></asp:TextBox>
                 </div>
                 <div class="form-row">
-                    <label>Giá</label>
+                    <label>Price</label>
                     <asp:TextBox ID="txtPrice" runat="server" CssClass="form-input" TextMode="Number"></asp:TextBox>
                 </div>
                 <div class="form-row">
-                    <label>Số lượng</label>
+                    <label>Stock</label>
                     <asp:TextBox ID="txtStock" runat="server" CssClass="form-input" TextMode="Number"></asp:TextBox>
                 </div>
                 <div class="form-row">
-                    <label>URL hình ảnh</label>
+                    <label>Image URL</label>
                     <asp:TextBox ID="txtImageUrl" runat="server" CssClass="form-input"></asp:TextBox>
                 </div>
                 <div class="form-row">
-                    <label>Mô tả</label>
+                    <label>Description</label>
                     <asp:TextBox ID="txtDescription" runat="server" CssClass="form-input" TextMode="MultiLine" Rows="3"></asp:TextBox>
                 </div>
                 <div class="form-actions">
-                    <asp:Button ID="btnSaveProduct" runat="server" Text="Lưu" CssClass="btn-save" OnClick="btnSaveProduct_Click" />
-                    <button type="button" class="btn-cancel" onclick="hideProductForm()">Hủy</button>
+                    <asp:Button ID="btnSaveProduct" runat="server" Text="Save" CssClass="btn-save" OnClick="btnSaveProduct_Click" />
+                    <button type="button" class="btn-cancel" onclick="hideProductForm()">Cancel</button>
                 </div>
             </div>
 
@@ -109,17 +109,17 @@
                 OnRowCommand="gvProducts_RowCommand" DataKeyNames="ProductId">
                 <Columns>
                     <asp:BoundField DataField="ProductId" HeaderText="ID" />
-                    <asp:BoundField DataField="ProductName" HeaderText="Tên sản phẩm" />
-                    <asp:BoundField DataField="Brand" HeaderText="Thương hiệu" />
-                    <asp:BoundField DataField="Price" HeaderText="Giá" DataFormatString="{0:N0}" />
-                    <asp:BoundField DataField="Stock" HeaderText="Kho" />
-                    <asp:BoundField DataField="ShopName" HeaderText="Cửa hàng" />
-                    <asp:TemplateField HeaderText="Thao tác">
+                    <asp:BoundField DataField="ProductName" HeaderText="Product Name" />
+                    <asp:BoundField DataField="Brand" HeaderText="Brand" />
+                    <asp:BoundField DataField="Price" HeaderText="Price" DataFormatString="{0:N0}" />
+                    <asp:BoundField DataField="Stock" HeaderText="Stock" />
+                    <asp:BoundField DataField="ShopName" HeaderText="Shop" />
+                    <asp:TemplateField HeaderText="Actions">
                         <ItemTemplate>
                             <asp:Button runat="server" CommandName="EditProduct" CommandArgument='<%# Eval("ProductId") %>' 
-                                Text="Sửa" CssClass="btn-edit" />
+                                Text="Edit" CssClass="btn-edit" />
                             <asp:Button runat="server" CommandName="DeleteProduct" CommandArgument='<%# Eval("ProductId") %>' 
-                                Text="Xóa" CssClass="btn-delete" OnClientClick="return confirm('Xác nhận xóa sản phẩm này?');" />
+                                Text="Delete" CssClass="btn-delete" OnClientClick="return confirm('Confirm delete this product?');" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

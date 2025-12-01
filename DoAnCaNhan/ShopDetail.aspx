@@ -1,4 +1,4 @@
-<%@ Page Title="Chi tiết cửa hàng" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="ShopDetail.aspx.cs" Inherits="ShopDetail" %>
+<%@ Page Title="Shop Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="ShopDetail.aspx.cs" Inherits="ShopDetail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="shop-detail-container">
-        <a href="/Shop.aspx" class="back-link">← Quay lại danh sách</a>
+        <a href="/Shop.aspx" class="back-link">← Back to list</a>
         
         <div class="shop-info">
             <div class="shop-header">
@@ -25,7 +25,7 @@
         </div>
 
         <div class="products-section">
-            <h2>Sản phẩm của cửa hàng</h2>
+            <h2>Shop Products</h2>
             <div class="products-grid">
                 <asp:Repeater ID="rptProducts" runat="server">
                     <ItemTemplate>
@@ -33,9 +33,9 @@
                             <img src='<%# Eval("ImageUrl") %>' alt='<%# Eval("ProductName") %>' />
                             <h3><%# Eval("ProductName") %></h3>
                             <p class="brand"><%# Eval("Brand") %></p>
-                            <p class="price"><%# Eval("Price", "{0:N0}") %> VNĐ</p>
-                            <p class="stock">Kho: <%# Eval("Stock") %></p>
-                            <a href='Product.aspx?id=<%# Eval("ProductId") %>' class="btn-view">Xem chi tiết</a>
+                            <p class="price"><%# Eval("Price", "{0:N0}") %> VND</p>
+                            <p class="stock">Stock: <%# Eval("Stock") %></p>
+                            <a href='Product.aspx?id=<%# Eval("ProductId") %>' class="btn-view">View Details</a>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>

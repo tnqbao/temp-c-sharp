@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Trang Chủ" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Default" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -8,13 +8,13 @@
     <div class="hero-section">
         <div class="hero-content">
             <h1 class="hero-title">QuocBaoPC</h1>
-            <p class="hero-subtitle">Chuyên cung cấp linh kiện máy tính chính hãng, giá tốt nhất thị trường</p>
+            <p class="hero-subtitle">Providing authentic computer components at the best market prices</p>
             <div class="hero-buttons">
                 <asp:HyperLink runat="server" NavigateUrl="~/Shop.aspx" CssClass="btn-primary">
-                    🛒 Mua sắm ngay
+                    🛒 Shop Now
                 </asp:HyperLink>
                 <asp:HyperLink runat="server" NavigateUrl="~/Info.aspx" CssClass="btn-secondary">
-                    Tìm hiểu thêm
+                    Learn More
                 </asp:HyperLink>
             </div>
         </div>
@@ -28,34 +28,34 @@
 
     <!-- FEATURES SECTION -->
     <div class="features-section">
-        <h2 class="section-title">🌟 Tại sao chọn chúng tôi?</h2>
+        <h2 class="section-title">🌟 Why Choose Us?</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">✅</div>
-                <h3>Chính hãng 100%</h3>
-                <p>Cam kết sản phẩm chính hãng, có đầy đủ tem bảo hành</p>
+                <h3>100% Authentic</h3>
+                <p>Genuine products with full warranty seals</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🚚</div>
-                <h3>Giao hàng nhanh</h3>
-                <p>Giao hàng toàn quốc, nhanh chóng trong 24-48h</p>
+                <h3>Fast Delivery</h3>
+                <p>Nationwide shipping within 24-48h</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">💰</div>
-                <h3>Giá tốt nhất</h3>
-                <p>Giá cạnh tranh, nhiều ưu đãi hấp dẫn</p>
+                <h3>Best Prices</h3>
+                <p>Competitive pricing with attractive deals</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🛡️</div>
-                <h3>Bảo hành dài hạn</h3>
-                <p>Hỗ trợ bảo hành và đổi trả linh hoạt</p>
+                <h3>Long-term Warranty</h3>
+                <p>Flexible warranty and return support</p>
             </div>
         </div>
     </div>
 
     <!-- CATEGORIES SECTION -->
     <div class="categories-section">
-        <h2 class="section-title">Danh mục sản phẩm</h2>
+        <h2 class="section-title">Product Categories</h2>
         <div class="categories-grid">
             <asp:HyperLink runat="server" NavigateUrl="~/Shop.aspx?cat=cpu" CssClass="category-card">
                 <div class="category-icon"></div>
@@ -99,32 +99,32 @@
     <div class="stats-section">
         <div class="stat-item">
             <div class="stat-number">1000+</div>
-            <div class="stat-label">Sản phẩm</div>
+            <div class="stat-label">Products</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">5000+</div>
-            <div class="stat-label">Khách hàng</div>
+            <div class="stat-label">Customers</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">24/7</div>
-            <div class="stat-label">Hỗ trợ</div>
+            <div class="stat-label">Support</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">100%</div>
-            <div class="stat-label">Hài lòng</div>
+            <div class="stat-label">Satisfaction</div>
         </div>
     </div>
 
     <!-- HERO PRODUCTS SECTION -->
-    <h2>Sản phẩm nổi bật</h2>
+    <h2>Featured Products</h2>
     <div class="hero-products">
         <asp:Repeater ID="rptHero" runat="server">
             <ItemTemplate>
                 <div class="product-card">
                     <img src='<%# Eval("ImageUrl") %>' alt='<%# Eval("ProductName") %>' />
                     <h3><%# Eval("ProductName") %></h3>
-                    <p class="price"><%# Eval("Price", "{0:N0}") %> VNĐ</p>
-                    <a href='Product.aspx?id=<%# Eval("ProductId") %>' class="btn">Xem chi tiết</a>
+                    <p class="price"><%# Eval("Price", "{0:N0}") %> VND</p>
+                    <a href='Product.aspx?id=<%# Eval("ProductId") %>' class="btn">View Details</a>
                 </div>
             </ItemTemplate>
         </asp:Repeater>
@@ -138,8 +138,8 @@
                 <div class="product-card">
                     <img src='<%# Eval("ImageUrl") %>' alt='<%# Eval("ProductName") %>' />
                     <h3><%# Eval("ProductName") %></h3>
-                    <p class="price"><%# Eval("Price", "{0:N0}") %> VNĐ</p>
-                    <a href='Product.aspx?id=<%# Eval("ProductId") %>' class="btn">Xem chi tiết</a>
+                    <p class="price"><%# Eval("Price", "{0:N0}") %> VND</p>
+                    <a href='Product.aspx?id=<%# Eval("ProductId") %>' class="btn">View Details</a>
                 </div>
             </ItemTemplate>
         </asp:Repeater>

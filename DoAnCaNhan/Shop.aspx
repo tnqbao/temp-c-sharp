@@ -1,12 +1,12 @@
-﻿<%@ Page Title="Cửa hàng" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Shop.aspx.cs" Inherits="Shop" %>
+﻿<%@ Page Title="Shops" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Shop.aspx.cs" Inherits="Shop" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="shop-container">
-        <h1>Danh sách cửa hàng</h1>
-        <p class="subtitle">Chọn cửa hàng để xem các sản phẩm</p>
+        <h1>Shop List</h1>
+        <p class="subtitle">Select a shop to view products</p>
         
         <div class="shops-grid">
             <asp:Repeater ID="rptShops" runat="server">

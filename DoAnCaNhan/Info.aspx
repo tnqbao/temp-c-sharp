@@ -1,4 +1,4 @@
-<%@ Page Title="Thông Tin" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Info.aspx.cs" Inherits="DoAnCaNhan.Info" %>
+<%@ Page Title="About Us" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Info.aspx.cs" Inherits="DoAnCaNhan.Info" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -6,47 +6,47 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="info-container">
         <div class="info-header">
-            <h1>🖥️ Giới thiệu về QuocBaoPC</h1>
-            <p class="info-subtitle">Chuyên cung cấp linh kiện máy tính chính hãng, uy tín hàng đầu</p>
+            <h1>🖥️ About QuocBaoPC</h1>
+            <p class="info-subtitle">Professional computer hardware provider with top-tier authenticity</p>
         </div>
 
         <!-- ABOUT US -->
         <div class="info-section">
             <div class="section-icon">ℹ️</div>
-            <h2>Về chúng tôi</h2>
+            <h2>About Us</h2>
             <p>
-                <strong>QuocBaoPC</strong> là hệ thống cửa hàng chuyên cung cấp linh kiện máy tính, thiết bị gaming và phụ kiện công nghệ chính hãng. 
-                Với nhiều năm kinh nghiệm trong ngành, chúng tôi cam kết mang đến cho khách hàng những sản phẩm chất lượng cao với giá cả cạnh tranh nhất.
+                <strong>QuocBaoPC</strong> is a computer hardware retail chain specializing in authentic PC components, gaming equipment, and tech accessories. 
+                With years of experience in the industry, we are committed to providing customers with high-quality products at the most competitive prices.
             </p>
             <p>
-                Chúng tôi tự hào là đối tác chính thức của các thương hiệu lớn như ASUS, MSI, Gigabyte, Intel, AMD, NVIDIA, và nhiều hãng nổi tiếng khác.
+                We are proud to be official partners of major brands such as ASUS, MSI, Gigabyte, Intel, AMD, NVIDIA, and many other renowned manufacturers.
             </p>
         </div>
 
         <!-- MISSION -->
         <div class="info-section">
             <div class="section-icon">🎯</div>
-            <h2>Sứ mệnh</h2>
+            <h2>Mission</h2>
             <div class="mission-grid">
                 <div class="mission-card">
                     <div class="mission-icon">✅</div>
-                    <h3>Chất lượng</h3>
-                    <p>Cam kết 100% sản phẩm chính hãng, nguồn gốc rõ ràng</p>
+                    <h3>Quality</h3>
+                    <p>100% authentic products with verified origins</p>
                 </div>
                 <div class="mission-card">
                     <div class="mission-icon">💰</div>
-                    <h3>Giá cả</h3>
-                    <p>Giá tốt nhất thị trường, nhiều chương trình khuyến mãi</p>
+                    <h3>Pricing</h3>
+                    <p>Best market prices with frequent promotions</p>
                 </div>
                 <div class="mission-card">
                     <div class="mission-icon">🤝</div>
-                    <h3>Dịch vụ</h3>
-                    <p>Tư vấn tận tình, hỗ trợ 24/7</p>
+                    <h3>Service</h3>
+                    <p>Dedicated consultation and 24/7 support</p>
                 </div>
                 <div class="mission-card">
                     <div class="mission-icon">🛡️</div>
-                    <h3>Bảo hành</h3>
-                    <p>Chế độ bảo hành tốt, đổi trả linh hoạt</p>
+                    <h3>Warranty</h3>
+                    <p>Excellent warranty policy with flexible returns</p>
                 </div>
             </div>
         </div>
@@ -54,12 +54,12 @@
         <!-- PRODUCTS -->
         <div class="info-section">
             <div class="section-icon">📦</div>
-            <h2>Sản phẩm & Dịch vụ</h2>
+            <h2>Products & Services</h2>
             <div class="products-list">
                 <div class="product-item">
                     <span class="product-icon">🎯</span>
                     <div>
-                        <h4>Linh kiện PC</h4>
+                        <h4>PC Components</h4>
                         <p>CPU, VGA, RAM, SSD, Mainboard, PSU, Case...</p>
                     </div>
                 </div>
@@ -67,35 +67,35 @@
                     <span class="product-icon">🎮</span>
                     <div>
                         <h4>Gaming Gear</h4>
-                        <p>Chuột, bàn phím, tai nghe, màn hình gaming...</p>
+                        <p>Gaming mice, keyboards, headsets, monitors...</p>
                     </div>
                 </div>
                 <div class="product-item">
                     <span class="product-icon">💻</span>
                     <div>
-                        <h4>Laptop Gaming</h4>
+                        <h4>Gaming Laptops</h4>
                         <p>ASUS ROG, MSI, Acer Predator, Lenovo Legion...</p>
                     </div>
                 </div>
                 <div class="product-item">
                     <span class="product-icon">🔧</span>
                     <div>
-                        <h4>Dịch vụ build PC</h4>
-                        <p>Tư vấn, lắp ráp, cài đặt theo yêu cầu</p>
+                        <h4>PC Building Service</h4>
+                        <p>Consultation, assembly, and custom installation</p>
                     </div>
                 </div>
                 <div class="product-item">
                     <span class="product-icon">🛠️</span>
                     <div>
-                        <h4>Bảo trì & Sửa chữa</h4>
-                        <p>Vệ sinh, nâng cấp, sửa chữa máy tính</p>
+                        <h4>Maintenance & Repair</h4>
+                        <p>Cleaning, upgrades, and computer repairs</p>
                     </div>
                 </div>
                 <div class="product-item">
                     <span class="product-icon">📱</span>
                     <div>
-                        <h4>Phụ kiện công nghệ</h4>
-                        <p>USB, ổ cứng di động, hub, adapter...</p>
+                        <h4>Tech Accessories</h4>
+                        <p>USB drives, external HDDs, hubs, adapters...</p>
                     </div>
                 </div>
             </div>
@@ -104,12 +104,12 @@
         <!-- CONTACT INFO -->
         <div class="info-section">
             <div class="section-icon">📞</div>
-            <h2>Thông tin liên hệ</h2>
+            <h2>Contact Information</h2>
             <div class="contact-grid">
                 <div class="contact-card">
                     <div class="contact-icon">📍</div>
-                    <h3>Địa chỉ</h3>
-                    <p>123 Đường ABC, Quận XYZ<br/>Thành phố Hồ Chí Minh</p>
+                    <h3>Address</h3>
+                    <p>123 ABC Street, XYZ District<br/>Ho Chi Minh City</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">☎️</div>
@@ -123,8 +123,8 @@
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">🕒</div>
-                    <h3>Giờ làm việc</h3>
-                    <p>T2 - T7: 8:00 - 21:00<br/>Chủ nhật: 8:00 - 18:00</p>
+                    <h3>Business Hours</h3>
+                    <p>Mon - Sat: 8:00 AM - 9:00 PM<br/>Sunday: 8:00 AM - 6:00 PM</p>
                 </div>
             </div>
         </div>
@@ -132,92 +132,50 @@
         <!-- WHY CHOOSE US -->
         <div class="info-section highlight-section">
             <div class="section-icon">⭐</div>
-            <h2>Tại sao chọn QuocBaoPC?</h2>
+            <h2>Why Choose QuocBaoPC?</h2>
             <div class="why-choose-list">
                 <div class="why-item">
                     <span class="why-number">01</span>
                     <div class="why-content">
-                        <h4>Đối tác chính thức</h4>
-                        <p>Là đại lý chính thức của các thương hiệu hàng đầu thế giới</p>
+                        <h4>Official Partner</h4>
+                        <p>Official distributor of world-leading brands</p>
                     </div>
                 </div>
                 <div class="why-item">
                     <span class="why-number">02</span>
                     <div class="why-content">
-                        <h4>Sản phẩm chính hãng</h4>
-                        <p>100% sản phẩm chính hãng, có tem bảo hành, hóa đơn VAT</p>
+                        <h4>Authentic Products</h4>
+                        <p>100% genuine products with warranty seals and VAT invoices</p>
                     </div>
                 </div>
                 <div class="why-item">
                     <span class="why-number">03</span>
                     <div class="why-content">
-                        <h4>Đội ngũ chuyên nghiệp</h4>
-                        <p>Tư vấn viên giàu kinh nghiệm, nhiệt tình</p>
+                        <h4>Competitive Pricing</h4>
+                        <p>Best market prices with frequent special offers</p>
                     </div>
                 </div>
                 <div class="why-item">
                     <span class="why-number">04</span>
                     <div class="why-content">
-                        <h4>Giao hàng toàn quốc</h4>
-                        <p>Miễn phí ship nội thành, giao hàng toàn quốc trong 24-48h</p>
+                        <h4>Expert Consultation</h4>
+                        <p>Experienced technical team providing professional advice</p>
                     </div>
                 </div>
                 <div class="why-item">
                     <span class="why-number">05</span>
                     <div class="why-content">
-                        <h4>Bảo hành tận tâm</h4>
-                        <p>Hỗ trợ bảo hành, đổi trả trong vòng 30 ngày</p>
+                        <h4>Nationwide Delivery</h4>
+                        <p>Fast shipping to all provinces across the country</p>
                     </div>
                 </div>
                 <div class="why-item">
                     <span class="why-number">06</span>
                     <div class="why-content">
-                        <h4>Thanh toán linh hoạt</h4>
-                        <p>Hỗ trợ trả góp 0%, thanh toán online, COD</p>
+                        <h4>24/7 Support</h4>
+                        <p>Always ready to assist and answer customer questions</p>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- STUDENT INFO -->
-        <div class="info-section student-section">
-            <div class="section-icon">🎓</div>
-            <h2>Thông tin đồ án</h2>
-            <div class="student-info">
-                <table class="info-table">
-                    <tr>
-                        <th>Sinh viên thực hiện:</th>
-                        <td>Trần Nguyễn Quốc Bảo</td>
-                    </tr>
-                    <tr>
-                        <th>MSSV:</th>
-                        <td>28211106299</td>
-                    </tr>
-                    <tr>
-                        <th>Mã lớp:</th>
-                        <td>IS 385 K</td>
-                    </tr>
-                    <tr>
-                        <th>Đề tài:</th>
-                        <td>Website bán linh kiện máy tính - QuocBaoPC</td>
-                    </tr>
-                    <tr>
-                        <th>Công nghệ:</th>
-                        <td>ASP.NET Web Forms, C#, SQL Server</td>
-                    </tr>
-                    <tr>
-                        <th>GitHub:</th>
-                        <td><a href="https://github.com/tnqbao" target="_blank" style="color: #ff6b00; text-decoration: none;">github.com/tnqbao</a></td>
-                    </tr>
-                    <tr>
-                        <th>LinkedIn:</th>
-                        <td><a href="https://www.linkedin.com/in/tnqb2004/" target="_blank" style="color: #ff6b00; text-decoration: none;">linkedin.com/in/tnqb2004</a></td>
-                    </tr>
-                    <tr>
-                        <th>Năm học:</th>
-                        <td>2024 - 2025</td>
-                    </tr>
-                </table>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,13 +98,13 @@
             <h1>🖥️ QuocBaoPC</h1>
             <span class="hamburger" onclick="toggleMenu()">☰</span>
             <nav id="mainNav">
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Trang chủ</asp:HyperLink>
-                <asp:HyperLink ID="lnkShop" runat="server" NavigateUrl="~/Shop.aspx">Cửa hàng</asp:HyperLink>
-                <asp:HyperLink ID="lnkCart" runat="server" NavigateUrl="~/Cart.aspx">Giỏ hàng</asp:HyperLink>
-                <asp:HyperLink ID="lnkOrders" runat="server" NavigateUrl="~/Admin.aspx">Quản trị</asp:HyperLink>
-                <asp:HyperLink ID="lnkInfo" runat="server" NavigateUrl="~/Info.aspx">Thông tin</asp:HyperLink>
-                <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="/Login.aspx">Đăng nhập</asp:HyperLink>
-                <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="/Register.aspx">Đăng ký</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                <asp:HyperLink ID="lnkShop" runat="server" NavigateUrl="~/Shop.aspx">Shops</asp:HyperLink>
+                <asp:HyperLink ID="lnkCart" runat="server" NavigateUrl="~/Cart.aspx">Cart</asp:HyperLink>
+                <asp:HyperLink ID="lnkOrders" runat="server" NavigateUrl="~/Admin.aspx">Admin</asp:HyperLink>
+                <asp:HyperLink ID="lnkInfo" runat="server" NavigateUrl="~/Info.aspx">Info</asp:HyperLink>
+                <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="/Login.aspx">Login</asp:HyperLink>
+                <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="/Register.aspx">Register</asp:HyperLink>
             </nav>
         </header>
         <div class="content">

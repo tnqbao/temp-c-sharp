@@ -14,7 +14,7 @@ public partial class Login : System.Web.UI.Page
         {
             lblMessage.Visible = true;
             lblMessage.ForeColor = System.Drawing.Color.Red;
-            lblMessage.Text = "Vui lòng nhập Username và Password!";
+            lblMessage.Text = "Please enter Username and Password!";
             return;
         }
 
@@ -26,7 +26,7 @@ public partial class Login : System.Web.UI.Page
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Password", password); // demo, không hash
+                cmd.Parameters.AddWithValue("@Password", password); // demo, no hashing
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -41,7 +41,7 @@ public partial class Login : System.Web.UI.Page
                     {
                         lblMessage.Visible = true;
                         lblMessage.ForeColor = System.Drawing.Color.Red;
-                        lblMessage.Text = "Username hoặc Password không đúng!";
+                        lblMessage.Text = "Incorrect Username or Password!";
                     }
                 }
             }

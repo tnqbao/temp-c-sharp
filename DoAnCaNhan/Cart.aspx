@@ -1,15 +1,15 @@
-<%@ Page Title="Giỏ hàng" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Cart.aspx.cs" Inherits="Cart" %>
+<%@ Page Title="Shopping Cart" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Cart.aspx.cs" Inherits="Cart" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="cart-container">
-        <h1>Giỏ hàng của bạn</h1>
+        <h1>Your Shopping Cart</h1>
         
         <asp:Panel ID="pnlEmptyCart" runat="server" CssClass="empty-cart" Visible="false">
-            <p>Giỏ hàng trống</p>
-            <asp:HyperLink runat="server" NavigateUrl="/Shop.aspx" CssClass="btn-shop-now">Mua sắm ngay</asp:HyperLink>
+            <p>Your cart is empty</p>
+            <asp:HyperLink runat="server" NavigateUrl="/Shop.aspx" CssClass="btn-shop-now">Shop Now</asp:HyperLink>
         </asp:Panel>
 
         <asp:Panel ID="pnlCartItems" runat="server">
@@ -20,7 +20,7 @@
                         <div class="item-info">
                             <h3><%# Eval("ProductName") %></h3>
                             <p class="item-brand"><%# Eval("Brand") %></p>
-                            <p class="item-price"><%# Eval("Price", "{0:N0}") %> VNĐ</p>
+                            <p class="item-price"><%# Eval("Price", "{0:N0}") %> VND</p>
                         </div>
                         <div class="item-quantity">
                             <asp:Button runat="server" CommandName="Decrease" CommandArgument='<%# Eval("ProductId") %>' 
@@ -30,9 +30,9 @@
                                 Text="+" CssClass="btn-qty" />
                         </div>
                         <div class="item-total">
-                            <p class="subtotal"><%# Eval("Subtotal", "{0:N0}") %> VNĐ</p>
+                            <p class="subtotal"><%# Eval("Subtotal", "{0:N0}") %> VND</p>
                             <asp:Button runat="server" CommandName="Remove" CommandArgument='<%# Eval("ProductId") %>' 
-                                Text="Xóa" CssClass="btn-remove" OnClientClick="return confirm('Xóa sản phẩm này?');" />
+                                Text="Remove" CssClass="btn-remove" OnClientClick="return confirm('Remove this item?');" />
                         </div>
                     </div>
                 </ItemTemplate>
@@ -40,10 +40,10 @@
 
             <div class="cart-summary">
                 <div class="summary-row">
-                    <span>Tổng cộng:</span>
-                    <span class="total-amount"><asp:Label ID="lblTotal" runat="server"></asp:Label> VNĐ</span>
+                    <span>Total:</span>
+                    <span class="total-amount"><asp:Label ID="lblTotal" runat="server"></asp:Label> VND</span>
                 </div>
-                <asp:Button ID="btnCheckout" runat="server" Text="Thanh toán" CssClass="btn-checkout" OnClick="btnCheckout_Click" />
+                <asp:Button ID="btnCheckout" runat="server" Text="Checkout" CssClass="btn-checkout" OnClick="btnCheckout_Click" />
             </div>
         </asp:Panel>
     </div>
@@ -227,4 +227,3 @@
         }
     </style>
 </asp:Content>
-
