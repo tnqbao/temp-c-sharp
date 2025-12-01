@@ -5,17 +5,20 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="shop-container">
-        <h1>🏪 Danh sách cửa hàng</h1>
+        <h1>Danh sách cửa hàng</h1>
         <p class="subtitle">Chọn cửa hàng để xem các sản phẩm</p>
         
         <div class="shops-grid">
             <asp:Repeater ID="rptShops" runat="server">
                 <ItemTemplate>
                     <a href='ShopDetail.aspx?id=<%# Eval("ShopId") %>' class="shop-card">
-                        <div class="shop-icon">🏬</div>
-                        <h3><%# Eval("ShopName") %></h3>
-                        <p class="shop-address">📍 <%# Eval("Address") %></p>
-                        <p class="shop-phone">📞 <%# Eval("Phone") %></p>
+                        <div class="shop-header">
+                            <h3><%# Eval("ShopName") %></h3>
+                        </div>
+                        <div class="shop-details">
+                            <p class="shop-address">📍 <%# Eval("Address") %></p>
+                            <p class="shop-phone">📞 <%# Eval("Phone") %></p>
+                        </div>
                     </a>
                 </ItemTemplate>
             </asp:Repeater>
@@ -41,7 +44,7 @@
 
         .shops-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
 
@@ -49,10 +52,10 @@
             background: #1f1f1f;
             border: 1px solid #333;
             border-radius: 8px;
-            padding: 30px;
-            text-align: center;
+            padding: 0;
             text-decoration: none;
             transition: all 0.3s;
+            overflow: hidden;
         }
 
         .shop-card:hover {
@@ -61,15 +64,19 @@
             box-shadow: 0 5px 20px rgba(255, 107, 0, 0.2);
         }
 
-        .shop-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
+        .shop-header {
+            background: linear-gradient(135deg, #ff6b00, #ff8c3f);
+            padding: 20px;
         }
 
-        .shop-card h3 {
+        .shop-header h3 {
             color: #fff;
             font-size: 1.4rem;
-            margin-bottom: 15px;
+            margin: 0;
+        }
+
+        .shop-details {
+            padding: 20px;
         }
 
         .shop-address, .shop-phone {

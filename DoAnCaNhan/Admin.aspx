@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="Quản trị" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Admin.aspx.cs" Inherits="Admin" %>
 
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="admin-container">
         <h1>⚙️ Quản trị hệ thống</h1>
         
@@ -352,7 +355,4 @@
             document.getElementById('product-form').style.display = 'none';
         }
     </script>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 </asp:Content>

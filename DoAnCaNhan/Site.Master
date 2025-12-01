@@ -93,10 +93,11 @@
             <nav id="mainNav">
                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Trang chủ</asp:HyperLink>
                 <asp:HyperLink ID="lnkShop" runat="server" NavigateUrl="~/Shop.aspx">Cửa hàng</asp:HyperLink>
+                <asp:HyperLink ID="lnkCart" runat="server" NavigateUrl="~/Cart.aspx">Giỏ hàng</asp:HyperLink>
                 <asp:HyperLink ID="lnkOrders" runat="server" NavigateUrl="~/Admin.aspx">Quản trị</asp:HyperLink>
                 <asp:HyperLink ID="lnkInfo" runat="server" NavigateUrl="~/Info.aspx">Thông tin</asp:HyperLink>
-                <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Login.aspx">Đăng nhập</asp:HyperLink>
-                <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="~/Register.aspx">Đăng ký</asp:HyperLink>
+                <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="/Login.aspx">Đăng nhập</asp:HyperLink>
+                <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="/Register.aspx">Đăng ký</asp:HyperLink>
             </nav>
         </header>
         <div class="content">

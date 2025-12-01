@@ -110,6 +110,7 @@
     <Content Include="App_Data\tnqbaopc_log.ldf">
       <DependentUpon>tnqbaopc.mdf</DependentUpon>
     </Content>
+    <Content Include="Cart.aspx" />
     <Content Include="fonts\Content\bootstrap-theme.css" />
     <Content Include="fonts\Content\bootstrap-theme.min.css" />
     <Content Include="fonts\Content\bootstrap.css" />
@@ -179,6 +180,8 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cart.aspx.cs" />
+    <Compile Include="Cart.aspx.designer.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
