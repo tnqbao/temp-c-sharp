@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Web.UI.WebControls;
 
 public partial class Login : System.Web.UI.Page
 {
@@ -11,6 +12,8 @@ public partial class Login : System.Web.UI.Page
 
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
         {
+            lblMessage.Visible = true;
+            lblMessage.ForeColor = System.Drawing.Color.Red;
             lblMessage.Text = "Vui lòng nhập Username và Password!";
             return;
         }
@@ -32,10 +35,13 @@ public partial class Login : System.Web.UI.Page
                         Session["UserId"] = reader["UserId"];
                         Session["Username"] = username;
                         Session["FullName"] = reader["FullName"];
-                        Response.Redirect("~/Default.aspx");
+                        Response.Redirect("Default.aspx", false);
+                        Context.ApplicationInstance.CompleteRequest();
                     }
                     else
                     {
+                        lblMessage.Visible = true;
+                        lblMessage.ForeColor = System.Drawing.Color.Red;
                         lblMessage.Text = "Username hoặc Password không đúng!";
                     }
                 }

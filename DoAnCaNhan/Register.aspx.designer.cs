@@ -17,13 +17,13 @@ public partial class Register
     /// </summary>
     protected global::System.Web.UI.WebControls.TextBox txtUsername;
     /// <summary>
-    /// txtPassword control.
-    /// </summary>
-    protected global::System.Web.UI.WebControls.TextBox txtPassword;
-    /// <summary>
     /// txtEmail control.
     /// </summary>
     protected global::System.Web.UI.WebControls.TextBox txtEmail;
+    /// <summary>
+    /// txtPassword control.
+    /// </summary>
+    protected global::System.Web.UI.WebControls.TextBox txtPassword;
     /// <summary>
     /// txtFullName control.
     /// </summary>
@@ -32,8 +32,4 @@ public partial class Register
     /// btnRegister control.
     /// </summary>
     protected global::System.Web.UI.WebControls.Button btnRegister;
-    /// <summary>
-    /// pnlRegister control.
-    /// </summary>
-    protected global::System.Web.UI.WebControls.Panel pnlRegister;
 }

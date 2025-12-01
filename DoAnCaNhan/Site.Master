@@ -3,7 +3,7 @@
 <html lang="vi">
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Linh Kiện PC</title>
+    <title>QuocBaoPC</title>
     <style>
         * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background: linear-gradient(135deg, #1e1e1e, #121212); color: #f5f5f5; }
@@ -88,7 +88,7 @@
 <body>
     <form id="form1" runat="server">
         <header>
-            <h1>🖥️ Shop Linh Kiện PC</h1>
+            <h1>🖥️ QuocBaoPC</h1>
             <span class="hamburger" onclick="toggleMenu()">☰</span>
             <nav id="mainNav">
                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Trang chủ</asp:HyperLink>
@@ -103,7 +103,7 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
         </div>
         <footer>
-            &copy; 2025 Shop Linh Kiện PC. All rights reserved.
+            &copy; 2025 QuocBaoPC. All rights reserved.
         </footer>
     </form>
     <script>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Web.UI.WebControls;
 
 public partial class Register : System.Web.UI.Page
 {
@@ -13,6 +14,8 @@ public partial class Register : System.Web.UI.Page
 
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email))
         {
+            lblMessage.Visible = true;
+            lblMessage.ForeColor = System.Drawing.Color.Red;
             lblMessage.Text = "Vui lòng điền đầy đủ thông tin!";
             return;
         }
@@ -32,12 +35,23 @@ public partial class Register : System.Web.UI.Page
                 try
                 {
                     cmd.ExecuteNonQuery();
+                    lblMessage.Visible = true;
                     lblMessage.ForeColor = System.Drawing.Color.Green;
-                    lblMessage.Text = "Đăng ký thành công! <a href='Login.aspx'>Đăng nhập ngay</a>";
-                    pnlRegister.Visible = false;
+                    lblMessage.Text = "Đăng ký thành công! Đang chuyển hướng đến trang đăng nhập...";
+                    
+                    // Clear form
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    txtEmail.Text = "";
+                    txtFullName.Text = "";
+                    
+                    // Redirect to Login page after 2 seconds
+                    Response.AddHeader("REFRESH", "2;URL=Login.aspx");
                 }
                 catch (SqlException ex)
                 {
+                    lblMessage.Visible = true;
+                    lblMessage.ForeColor = System.Drawing.Color.Red;
                     if (ex.Number == 2627) // duplicate key
                         lblMessage.Text = "Username hoặc Email đã tồn tại!";
                     else

@@ -7,22 +7,22 @@
     <!-- HERO SECTION -->
     <div class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title">🖥️ Shop Linh Kiện PC</h1>
+            <h1 class="hero-title">QuocBaoPC</h1>
             <p class="hero-subtitle">Chuyên cung cấp linh kiện máy tính chính hãng, giá tốt nhất thị trường</p>
             <div class="hero-buttons">
                 <asp:HyperLink runat="server" NavigateUrl="~/Shop.aspx" CssClass="btn-primary">
                     🛒 Mua sắm ngay
                 </asp:HyperLink>
                 <asp:HyperLink runat="server" NavigateUrl="~/Info.aspx" CssClass="btn-secondary">
-                    ℹ️ Tìm hiểu thêm
+                    Tìm hiểu thêm
                 </asp:HyperLink>
             </div>
         </div>
         <div class="hero-animation">
-            <div class="floating-card card-1">💻</div>
-            <div class="floating-card card-2">🎮</div>
-            <div class="floating-card card-3">⌨️</div>
-            <div class="floating-card card-4">🖱️</div>
+            <div class="floating-card card-1"></div>
+            <div class="floating-card card-2"></div>
+            <div class="floating-card card-3"></div>
+            <div class="floating-card card-4"></div>
         </div>
     </div>
 
@@ -55,40 +55,40 @@
 
     <!-- CATEGORIES SECTION -->
     <div class="categories-section">
-        <h2 class="section-title">📂 Danh mục sản phẩm</h2>
+        <h2 class="section-title">Danh mục sản phẩm</h2>
         <div class="categories-grid">
             <asp:HyperLink runat="server" NavigateUrl="~/Shop.aspx?cat=cpu" CssClass="category-card">
-                <div class="category-icon">🎯</div>
+                <div class="category-icon"></div>
                 <h3>CPU</h3>
                 <p>Intel, AMD</p>
             </asp:HyperLink>
             
             <asp:HyperLink runat="server" NavigateUrl="~/Shop.aspx?cat=vga" CssClass="category-card">
-                <div class="category-icon">🎮</div>
+                <div class="category-icon"></div>
                 <h3>VGA</h3>
                 <p>NVIDIA, AMD</p>
             </asp:HyperLink>
             
             <asp:HyperLink runat="server" NavigateUrl="~/Shop.aspx?cat=ram" CssClass="category-card">
-                <div class="category-icon">💾</div>
+                <div class="category-icon"></div>
                 <h3>RAM</h3>
                 <p>DDR4, DDR5</p>
             </asp:HyperLink>
             
             <asp:HyperLink runat="server" NavigateUrl="~/Shop.aspx?cat=ssd" CssClass="category-card">
-                <div class="category-icon">💿</div>
+                <div class="category-icon"></div>
                 <h3>SSD</h3>
                 <p>NVMe, SATA</p>
             </asp:HyperLink>
             
             <asp:HyperLink runat="server" NavigateUrl="~/Shop.aspx?cat=mainboard" CssClass="category-card">
-                <div class="category-icon">🔧</div>
+                <div class="category-icon"></div>
                 <h3>Mainboard</h3>
                 <p>ASUS, MSI, Gigabyte</p>
             </asp:HyperLink>
             
             <asp:HyperLink runat="server" NavigateUrl="~/Shop.aspx?cat=case" CssClass="category-card">
-                <div class="category-icon">🖥️</div>
+                <div class="category-icon"></div>
                 <h3>Case</h3>
                 <p>Gaming, Workstation</p>
             </asp:HyperLink>
