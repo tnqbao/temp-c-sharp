@@ -129,6 +129,7 @@
     <Content Include="fonts\Content\bootstrap-theme.css.map" />
     <Content Include="Info.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Register.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -196,6 +197,8 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logout.aspx.cs" />
+    <Compile Include="Logout.aspx.designer.cs" />
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
